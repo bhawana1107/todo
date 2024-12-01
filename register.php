@@ -81,20 +81,8 @@ if (empty($errors)) {
 
 <body>
 
-    <?php if (!empty($errors)) : ?>
-        <?php foreach ($errors as $error) : ?>
-            <div class="alert alert-danger" role="alert">
-                <strong>Error!</strong> <?= $error ?>
-            </div>
-        <?php endforeach; ?>
-    <?php endif; ?>
-    <?php if (!empty($success)) : ?>
-
-        <div class="alert alert-success" role="alert">
-            <?= $success ?>
-        </div>
-
-    <?php endif; ?>
+    <?php include './components/errors.php' ?>
+    <?php include './components/success.php' ?>
 
     <div class="container mt-5">
         <div class="row justify-content-center">
